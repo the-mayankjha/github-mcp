@@ -1,0 +1,92 @@
+{
+  "id": "github-mcp",
+  "description": "Search GitHub repositories and work with issues, pull requests and files.",
+  "category": "Development",
+  "runtime": {
+    "type": "python"
+  },
+  "tags": [
+    "github",
+    "repositories",
+    "issues",
+    "pull requests"
+  ],
+  "type": "mcp",
+  "display_name": "PIHU GitHub MCP",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mayank Jha (PIHU)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-mayankjha/github-mcp",
+    "branch": "main"
+  },
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "github_search_repositories",
+      "description": "Search GitHub repositories by query string (e.g. 'language:python topic:mcp')."
+    },
+    {
+      "name": "github_get_repository",
+      "description": "Get full details of a GitHub repository."
+    },
+    {
+      "name": "github_list_issues",
+      "description": "List issues for a given GitHub repository."
+    },
+    {
+      "name": "github_create_issue",
+      "description": "Create a new issue in a GitHub repository (Requires GITHUB_TOKEN)."
+    },
+    {
+      "name": "github_list_pull_requests",
+      "description": "List pull requests for a given GitHub repository."
+    },
+    {
+      "name": "github_get_file_contents",
+      "description": "Get raw contents of a file from a GitHub repository."
+    },
+    {
+      "name": "github_list_commits",
+      "description": "List recent commits in a repository."
+    }
+  ],
+  "tool_count": 7,
+  "requirements": [
+    "Python 3.10 or newer"
+  ],
+  "installation": {
+    "type": "archive",
+    "entrypoint": "server.py"
+  },
+  "name": "github-mcp",
+  "artifacts": [],
+  "compatibility": {
+    "minimum_pihu_version": "1.2.8",
+    "operating_systems": [
+      "macos",
+      "windows",
+      "linux"
+    ],
+    "architectures": [
+      "arm64",
+      "x64"
+    ]
+  },
+  "permissions": {
+    "network": true,
+    "filesystem": false,
+    "shell_execution": false,
+    "env_vars_required": []
+  },
+  "auth_required": false,
+  "entrypoint": {
+    "command": "python",
+    "args": [],
+    "env": {}
+  }
+}
